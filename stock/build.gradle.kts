@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm")
 }
 
 group = "com.merelythis"
@@ -10,13 +10,12 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":base"))
-    implementation(project(":larkrobot"))
+    testImplementation(kotlin("test"))
 }
 
 tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
 }

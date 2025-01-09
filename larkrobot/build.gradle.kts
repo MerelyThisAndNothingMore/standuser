@@ -1,5 +1,6 @@
+
 plugins {
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm")
 }
 
 group = "com.merelythis"
@@ -10,13 +11,11 @@ repositories {
 }
 
 dependencies {
+    implementation("com.larksuite.oapi:oapi-sdk:2.4.4")
+    implementation("org.slf4j:slf4j-reload4j:2.0.16")
     implementation(project(":base"))
-    implementation(project(":larkrobot"))
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
 }

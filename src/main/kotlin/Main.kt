@@ -1,5 +1,8 @@
 package com.merelythis
 
+import utils.LocalConfigManager
+
 fun main() {
-    println("Hello World!")
+    LocalConfigManager.init()
+    LarkClient.launch()
 }
